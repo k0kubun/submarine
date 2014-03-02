@@ -23,7 +23,7 @@ class Submarine
   def deactivate
     login unless logged_in?
 
-    visit("#{TWITTER_URL}settings/accounts/confirm_deactivation")
+    visit(DEACTIVATION_URL)
     find("#settings_save")
     click_button("@#{@screen_name}を削除")
 
