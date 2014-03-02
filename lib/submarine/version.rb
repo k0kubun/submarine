@@ -1,3 +1,3 @@
-module Submarine
+class Submarine
   VERSION = "0.0.1"
 end

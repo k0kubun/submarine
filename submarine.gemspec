@@ -11,13 +11,15 @@ Gem::Specification.new do |spec|
   spec.summary       = %q{}
   spec.description   = %q{}
   spec.homepage      = "https://github.com/k0kubun/submarine"
-  spec.license       = "MIT"
+  spec.license       = "public domain"
 
   spec.files         = `git ls-files -z`.split("\x0")
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
+  spec.add_dependency "capybara", "~> 2.1.0"
+  spec.add_dependency "capybara-webkit", "~> 1.1.1"
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
 end
